@@ -314,18 +314,20 @@
         </div>
     </section>
 
-    <!-- ⑥ Story (ストーリー) -->
+<!-- ⑥ Story (ストーリー) -->
     <section id="story" class="py-24 md:py-40 bg-white/60">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <!-- Image Side -->
                 <div class="w-full md:w-1/2 relative" data-aos="fade-right">
                     <div class="relative overflow-hidden rounded-sm shadow-xl aspect-[3/4] md:aspect-[4/5] max-w-sm mx-auto bg-tdnm-bg">
-                        <img src="./assets/images/everythingflows.png" 
+                        <!-- 修正ポイント: パスを「assets/...」から始め、onerror属性を正しいJavaScriptの構文に修正 -->
+                        <img src="assets/images/everythingflows.png" 
                              alt="Gentle light and nature" 
                              class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
-                             onerror="./assets/images/work.png" >
+                             onerror="this.onerror=null; this.src='assets/images/work.png';">
                     </div>
+                    <!-- 装飾パーツ（背後の四角と丸）の重なり順（z-index）を安全に調整 -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-tdnm-main/20 -z-10 hidden md:block"></div>
                     <div class="absolute -top-6 -left-6 w-32 h-32 bg-tdnm-sub/10 -z-10 rounded-full hidden md:block"></div>
                 </div>
@@ -335,10 +337,10 @@
                     <span class="font-sans text-xs tracking-widest text-tdnm-accent block mb-8 uppercase">Story</span>
                     
                     <div class="prose prose-p:text-tdnm-text prose-headings:text-tdnm-main">
-                        <p class="text-lg md:text-xl mb-8 leading-loose font-medium text-tdnm-main">
+                        <h3 class="text-lg md:text-xl mb-8 leading-loose font-medium text-tdnm-main">
                             仏教の精神に触れながら育ち、<br>
                             静かな「芯」を大切にして生きてきました。
-                        </p>
+                        </h3>
                         <p class="font-sans text-xs tracking-[0.3em] text-tdnm-accent mb-8 uppercase">everything flows</p>
                         
                         <div class="space-y-6 text-sm md:text-base leading-loose text-tdnm-text">
@@ -350,14 +352,15 @@
                             <p>
                                 ４人の子育ても、<br>
                                 管理しすぎず、縛りすぎず、<br>
-                                それぞれの流れを信じて見守る。<br>
-                                その結果、<br>
-                                みんな自立した人として育ってくれました。感謝。
+                                それぞれを信じて見守る。<br>
+                                長男の座右の銘が「行雲流水」だそうで、<br>
+                                そこはもう少し力強い言葉の方がいいのでは？<br>
+                                とも思いますが・・・
                             </p>
                             <div class="pl-4 border-l-2 border-tdnm-sub my-6 py-2">
                                 <p class="italic text-tdnm-main text-sm md:text-base">
                                     「コントロールしないこと」<br>
-                                    「流れを信じること」
+                                    「自分を信じること」「尊重すること」
                                 </p>
                             </div>
                             <p>
